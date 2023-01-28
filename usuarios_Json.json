@@ -1,0 +1,33 @@
+{
+    "first_name_User": "Firmino",
+    "genero_user": "male",
+    "email_user": "firmino@gmail.com",
+    "status_user": "active"
+},
+{
+    "first_name_User": "Mariana",
+    "genero_user": "female",
+    "email_user": "mariana@uol.com",
+    "status_user": "active"
+},
+{
+    "first_name_User": "Reginaldo",
+    "genero_user": "male",
+    "email_user": "reginaldo@hotmail.com",
+    "status_user": "active"
+},
+{
+    "first_name_User": "Patricia",
+    "genero_user": "male",
+    "email_user": "patricia@bing.com",
+    "status_user": "active"
+},
+{
+    "first_name_User": "Geraldo",
+    "genero_user": "male",
+    "email_user": "geraldo@yahoo.com",
+    "status_user": "active"
+}
+
+
+
