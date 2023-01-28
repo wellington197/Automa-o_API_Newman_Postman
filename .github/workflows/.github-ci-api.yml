@@ -2,6 +2,7 @@ name: End-to-end tests
 
 on: [push] #Será disparado sempre que for efetuado um Push
 
+jobs: #Possui um trabalho
 
 image:
     name: postman/newman
