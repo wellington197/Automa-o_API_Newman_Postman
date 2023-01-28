@@ -10,6 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
     - task: NodeTool@0
       inputs:
         versionSpec: '10.x'
@@ -20,19 +21,3 @@ steps:
         npm run build
       displayName: 'npm install and build'
 
-    - task: CmdLine@2
-      continueOnError: true
-      inputs:
-      
-        script: |
-         sudo apt-get install -y bash
-         sudo npm install newman --global
-         newman run ./Go_Rest_API_postman_collection.json -e ./testes.postman_environment.json -r htmlextra --reporter-htmlextra-export ./exports_reports/export_extra2.html --reporter-htmlextra-title "Relatório Go_REST Extra" --reporter-htmlextra-titleSize 6 --reporter-htmlextra-showEnvironmentData
-         sleep 40
-    - task: PublishTestResults@2
-      displayName: 'Publish Test Results for postman'
-      inputs:
-       testResultsFormat: 'JUnit'
-       testResultsFiles: '**/*.xml'
-       mergeTestResults: true
-       failTaskOnFailedTests: false
