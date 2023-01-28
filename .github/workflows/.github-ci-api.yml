@@ -1,0 +1,11 @@
+image:
+    name: postman/newman
+    entrypoint: [ "" ]
+
+pages:
+  script:
+    - npm install -g newman-reporter-html
+    - newman run ./Go_Rest_API_postman_collection.json -e ./testes.postman_environment.json -r htmlextra --reporter-htmlextra-export ./exports_reports/export_extra2.html --reporter-htmlextra-title "Relatório Go_REST Extra" --reporter-htmlextra-titleSize 6
+    expire_in: 3 days
+    paths:
+      - public
