@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cli": "^1.0.1",
+    "html": "^1.0.0",
+    "newman-reporter-html": "^1.0.5"
+    
+  }
+}
