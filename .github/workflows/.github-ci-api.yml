@@ -1,3 +1,9 @@
+name: End-to-end tests
+
+on: [push] #Será disparado sempre que for efetuado um Push
+
+jobs: #Possui um trabalho
+
 image:
     name: postman/newman
     entrypoint: [ "" ]
@@ -5,7 +11,8 @@ image:
 pages:
   script:
     - npm install -g newman-reporter-html
-    - newman run ./Go_Rest_API_postman_collection.json -e ./testes.postman_environment.json -r htmlextra --reporter-htmlextra-export ./exports_reports/export_extra2.html --reporter-htmlextra-title "Relatório Go_REST Extra" --reporter-htmlextra-titleSize 6
+    - newman run ./Go_Rest_API_postman_collection.json -e ./testes.postman_environment.json -r htmlextra --reporter-htmlextra-export ./exports_reports/export_extra2.html --reporter-htmlextra-title "Relatório Go_REST Extra" --reporter-htmlextra-titleSize 6 --reporter-htmlextra-showEnvironmentDat
+  artifacts:
     expire_in: 3 days
     paths:
       - public
